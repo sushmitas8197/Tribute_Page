@@ -1,0 +1,19 @@
+var index = 0;
+var images = [
+    "https://static.billboard.com/files/media/02-suga-bts-map-of-the-soul-7-concept-02-2020-billboard-1548-compressed.jpg" ,
+    "https://static.billboard.com/files/media/02-jimin-bts-map-of-the-soul-7-concept-02-2020-billboard-1548-compressed.jpg",
+    "https://ibighit.com/bts/images/bts/discography/skool_luv_affair/album-cover.jpg",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw8xop47U0RRcgiEvCNZttNTJyTOG6f-xledXihnC3-w&s",
+    "https://static.billboard.com/files/media/02-jin-bts-map-of-the-soul-7-concept-02-2020-billboard-1548-compressed.jpg",          
+    "https://static.billboard.com/files/media/02-RM-bts-map-of-the-soul-7-concept-02-2020-billboard-1548-compressed.jpg",
+    "https://static.billboard.com/files/media/02-V-bts-map-of-the-soul-7-concept-02-2020-billboard-1548-compressed.jpg",]
+              
+function nextImage(goToPrevious) {
+if (goToPrevious) {
+    index = index === 0 ? 7 : index - 1;
+  } 
+  else {
+    index = index === 7 ? 0 : index + 1;
+  }
+  document.getElementById("image").src= images[index];
+}
